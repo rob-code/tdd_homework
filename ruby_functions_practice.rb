@@ -45,6 +45,8 @@ def volume_of_cube(a, b, c)
   return a * b * c
 end
 
+# rounded the following volumes so that the result can tested uniquely using assert_equal() in the tests
+
 def volume_of_sphere(radius)
   volume = (4 / 3) * Math::PI * radius ** 2
   return volume.round(3)
