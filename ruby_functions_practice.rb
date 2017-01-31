@@ -48,13 +48,13 @@ end
 # rounded the following volumes so that the result can tested uniquely using assert_equal() in the tests
 
 def volume_of_sphere(radius)
-  volume = (4 / 3) * Math::PI * radius ** 2
+  volume = Math::PI * radius ** 3 * 4 / 3
   return volume.round(3)
 end
 
 def fahrenheit_to_celsius(temp_f)
-  temp_C = ((temp_f - 32) * 5) / 9
-  return temp_C.round(3)
+  temp_C = ((temp_f.to_f - 32) * 5) / 9
+  return temp_C.round(5)
 end
 
 puts fahrenheit_to_celsius(100)
