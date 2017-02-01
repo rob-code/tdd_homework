@@ -39,10 +39,13 @@ end
 def number_to_short_month_name(month_number)
   month_name = Date::MONTHNAMES[month_number]
   return month_name[0..2]
+  # could have also used:
+  # return short_month_name = month_name.slice(0,3)
+
 end
 
-def volume_of_cube(a, b, c)
-  return a * b * c
+def volume_of_cube(a)
+  return a ** 3
 end
 
 # rounded the following volumes so that the result can tested uniquely using assert_equal() in the tests
